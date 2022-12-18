@@ -7,6 +7,4 @@ if age.isdigit():
     else:
         print ("It is unpaired number")
 else:
-    print ("Length is ", len(age), " characters.")
-
-   
+    print ("Length is ", len(age), " characters.")   
