@@ -43,8 +43,10 @@ while True:
            name = None
            print (phone_book.keys())
 
-    elif command == 'show':   
-        print (phone_book[name])    
+    elif command == 'show':
+        if phone_book.get(name) == None:
+           print(f"{name} is not available in the phone book, please enter another name")   
+        else: print (phone_book[name])    
 
 #Створити телефонну книгу, яка матиме наступні команди:
 #stats: кількість записів
