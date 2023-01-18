@@ -1,14 +1,14 @@
 from datetime import datetime
 
 def my_deco (func):
-    def wrap():
-        func()
-        print(f'Function {func} was called on {datetime.now()}')
+    def wrap(*args, **kwargs):
+        func(*args, **kwargs)
     return wrap 
 
 @my_deco
-def my_func():
+def my_func(funk_name='My function', start_time=datetime.now()):
     enter = input ('Press "Enter" to start a function ')
+    print(f'{funk_name} was started on {start_time}')
  
 my_func()
 
