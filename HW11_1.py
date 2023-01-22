@@ -2,8 +2,9 @@ from datetime import datetime
 
 def my_deco (func):
     def wrap(*args, **kwargs):
-        func(*args, **kwargs)
-    return wrap 
+        return func(*args, **kwargs)
+    return wrap
+      
 
 @my_deco
 def my_func(funk_name='My function', start_time=datetime.now()):
