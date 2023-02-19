@@ -5,10 +5,6 @@ phone_book = {
 
 import json
 
-json_data = json.dumps(phone_book)
-with open (r'C:\01_Education\03_IT\04_Pyhon\Laba\HW\phone_book.txt', 'a') as file:
-    file.write(json_data)
-
 print (phone_book.keys(),phone_book.values())
 
 while True:
@@ -35,6 +31,9 @@ while True:
            print(f"{name} is exist, please enter another name")
         else:
             phone_book[name] = number
+            json_data = json.dumps(phone_book)
+            with open ("phone_book.json", 'w') as file:
+                file.write(json_data)
             print (phone_book.keys())
         
     elif command == 'delete':
@@ -42,6 +41,9 @@ while True:
            print(f"{name} is missing, please enter an existing name")
         else:
            del phone_book[name]
+           json_data = json.dumps(phone_book)
+           with open ("phone_book.json", 'w') as file:
+                file.write(json_data)
            print(phone_book.keys())
     
     elif command == 'list':
