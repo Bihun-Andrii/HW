@@ -10,10 +10,11 @@ class Bot:
         print(message)
 
 class TelegramBot(Bot):
-    def __init__(self, url, chat_id):
-        self.url = url
-        self.chat_id = chat_id
-
+    def __init__(self, name):
+        super().__init__(name)
+        self.url = None
+        self.chat_id = None
+    
     def set_url (self, url):
         self.url = url
     
@@ -22,13 +23,12 @@ class TelegramBot(Bot):
 
     def send_message (self, message):
         self.message = message
-        print(f"{telegram_bot} says {self.message} to chat {self.chat_id} using {self.url}")
-        super().send_message()
-     
+        print(f"{self.name} bot says {self.message} to chat {self.chat_id} using {self.url}")
+
 some_bot = Bot("Marvin")
 some_bot.say_name()
-some_bot.send_message("Hi")
-telegram_bot = TelegramBot("TG","chat")
+some_bot.send_message("Hello")
+telegram_bot = TelegramBot("TG")
 telegram_bot.say_name()
 telegram_bot.send_message('Hello')
 telegram_bot.set_chat_id(1)

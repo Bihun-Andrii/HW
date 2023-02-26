@@ -7,7 +7,7 @@ class Bot:
 
     def send_message (self, message):
         self.message = message
-        print(message)
+        print(self.message)
 
 some_bot = Bot('Marvin')
 some_bot.say_name()
