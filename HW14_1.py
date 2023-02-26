@@ -32,7 +32,7 @@ while True:
         print(len(phone_book))
 
     elif command == 'add':
-        check_phone = re.findall(r'\+38\d+|38\d+|0', number)
+        check_phone = re.findall(r'\+380\d{10}|380\d{10}|0\d{9}', number)
         
         if name in phone_book:
            print(f"{name} is exist, please enter another name")
