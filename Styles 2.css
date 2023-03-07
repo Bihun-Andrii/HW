@@ -1,0 +1,62 @@
+h1 {
+     font-size: 36px;
+     text-align: center;
+     margin-top: 50px;
+   }
+h2, h3 {
+     font-size: 30px;
+     text-align: left;
+     margin-top: 50px;
+   }
+   
+img {
+     display: block;
+     margin: 0 auto;
+     max-width: 100%;
+     height: auto;
+     margin-top: 20px;
+   }
+   
+.about-me {
+     margin: 50px auto;
+     max-width: 700px;
+     text-align: center;
+     font-size: 24px;
+     line-height: 2;
+   }
+   
+table {
+     border-collapse: collapse;
+     margin: 10px auto;
+     max-width: 500px;
+   }
+   
+table th, table td {
+     border: 1px solid #ccc;
+     padding: 10px;
+   }
+   
+table th {
+     background-color: aquamarine;
+     text-align: center;
+   }
+   
+.work-experience {
+     margin: 500px;
+     max-width: 700px;
+   }
+   
+.work-experience h2 {
+     font-size: 28px;
+     margin-bottom: 20px;
+   }
+   
+.work-experience h3 {
+     font-size: 24px;
+     margin-bottom: 10px;
+   }
+   
+.work-experience p {
+     font-size: 20px;
+     margin-bottom: 10px;
+   }
