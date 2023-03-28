@@ -1,13 +1,16 @@
 import requests
 import random
 
-sites = ['http://google.com', 'http://facebook.com', 'http://twitter.com', 'http://amazon.com', 'http://apple.com']
+sites = ['https://google.com/', 'https://facebook.com/', 'https://twitter.com/', 'https://amazon.com/',
+         'https://apple.com/']
+
 site = random.choice(sites)
 
-response = requests.get(site)
-status_code = response.status_code
+res = requests.get(site)
+status_code = res.status_code
 site_name = site
-html_length = len(response.text)
+html_length = len(res.text)
+
 print(f"Site: {site_name}")
 print(f"Status code: {status_code}")
 print(f"HTML length: {html_length}")

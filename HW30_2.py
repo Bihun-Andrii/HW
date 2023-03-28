@@ -1,19 +1,16 @@
 import requests
-city = input("Enter city name: ")
+city = input("Назва міста: ")
 
-response = requests.get(f'https://api.open-meteo.com/v1/coords?q={city}')
-json_data = response.json()
+res = requests.get(f'https://api.open-meteo.com/v1/coords?q={city}')
+json_data = res.json()
 lat = json_data[0]['lat']
 lon = json_data[0]['lon']
 
-response = requests.get(f'https://api.open-meteo.com/v1/forecast?latitude={lat}&longitude={lon}')
-json_data = response.json()
+res2 = requests.get(f'https://api.open-meteo.com/v1/forecast?latitude={lat}&longitude={lon}')
+json_data = res2.json()
 current = json_data['current_weather']
 
-print(f"City: {city}")
-print(f"Temperature: {current['temperature']}°C")
-print(f"Humidity: {current['humidity']}%")
-print(f"Pressure: {current['pressure']} hPa")
-
-
-
+print(f"Місто: {city}")
+print(f"Температура: {current['temperature']}°C")
+print(f"Вологість: {current['humidity']}%")
+print(f"Тиск: {current['pressure']} hPa")
